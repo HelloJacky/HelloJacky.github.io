@@ -1,5 +1,5 @@
 # Site settings
-title: Magic Jacky's Blog 
+title: Jacky's Blog 
 email: admin@magicjacky.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -18,3 +18,5 @@ paginate: 4
 author: Jacky
 
 gems: [jekyll-paginate]
+
+permalink : /blog/:year/:month/:day/:title
