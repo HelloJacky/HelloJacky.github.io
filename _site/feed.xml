@@ -6,23 +6,117 @@
 </description>
     <link>http://magicjacky.com/</link>
     <atom:link href="http://magicjacky.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 12 Jan 2016 18:38:42 +0800</pubDate>
-    <lastBuildDate>Tue, 12 Jan 2016 18:38:42 +0800</lastBuildDate>
+    <pubDate>Thu, 14 Jan 2016 00:13:23 +0800</pubDate>
+    <lastBuildDate>Thu, 14 Jan 2016 00:13:23 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>搭建我的博客</title>
-        <description>
+        <description>&lt;h2 id=&quot;section&quot;&gt;开篇&lt;/h2&gt;
+&lt;p&gt;折腾了两天，终于搞好了这个小博客，这第一篇文章也总结下搭建这博客的方法和建议得了。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;为什么要搭建自己的博客&lt;/h2&gt;
+&lt;p&gt;总结过去(zhuang)，展望未来(b)。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;如何搭建&lt;/h2&gt;
+&lt;p&gt;搭建博客的方式有很多，我这里用的是GitHub Pages和Jekyll，为什么用这个组合呢？&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GitHub Pages空间免费（好像是300M），流量无限，无需购买或者搭建自己的服务器（这酸爽~）。&lt;/li&gt;
+  &lt;li&gt;结合Jekyll可以实现轻量级的博客系统，没有复杂的配置（So Easy！）。&lt;/li&gt;
+  &lt;li&gt;Jekyll支持Markdown，或者Textile（Cool~）。&lt;/li&gt;
+  &lt;li&gt;多种第三方主题和插件（就喜欢能扩展的）。&lt;/li&gt;
+  &lt;li&gt;可以绑定自己的域名（又可以装逼了）。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;接下来就讲一下怎样搭建。&lt;/p&gt;
+
+&lt;h3 id=&quot;github&quot;&gt;在GitHub上建立自己的站点仓库&lt;/h3&gt;
+&lt;p&gt;去&lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;按照上买的说明步骤创建你的站点仓库，我们搭建的是博客，所以类型就选择User or organzation site，然后clone你的仓库到本地，准备添加内容。&lt;/p&gt;
+
+&lt;h3 id=&quot;jekyll&quot;&gt;安装Jekyll&lt;/h3&gt;
+&lt;p&gt;Jekyll 究竟是什么？我摘抄下官网上的介绍吧：&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;官方网站可以自己搜，上面有文档，不过都是英文的，英文不好的小伙伴可以看&lt;a href=&quot;http://jekyll.bootcss.com/&quot;&gt;这里&lt;/a&gt;（我叫雷锋），感谢Bootstrap中文网的翻译。&lt;/p&gt;
+
+&lt;p&gt;安装方式在这列举&lt;strong&gt;两种&lt;/strong&gt;： &lt;br /&gt;
+1. 按照官网上的步骤用 gem 安装 &lt;br /&gt;
+2. 另一种就是GitHub上面推荐的利用Ruby软件管理工具Bundler安装（&lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages/&quot;&gt;传送门&lt;/a&gt;）&lt;/p&gt;
+
+&lt;p&gt;博主推荐第二种方法，因为你可以轻松的管理你的软件。那既然如此，就要安装Bundler,执行命令：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gem install bundler&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;安装完成后，在你的工程目录下 新建一个Gemfile文件，添加如下代码：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;source &#39;https://rubygems.org&#39;&lt;/code&gt;&lt;br /&gt;
+ &lt;code&gt;gem &#39;github-pages&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;保存，然后执行&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bundle install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;这时候bundler会分析依赖，然后逐个下载，类似CocoaPods，完成后jekyll就安装成功了。&lt;/p&gt;
+
+&lt;p&gt;如果将来需要更新环境的话，你只需要：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bundle update&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;生成博客系统&lt;/h3&gt;
+&lt;p&gt;接下来在你的站点仓库下新建一个Jekyll博客，执行如下命令：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;jekyll new blog&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;执行完成后，你会看到生成的blog文件夹，文件夹内就是站点的所有文件，其实就是一套站点模板，现在你的仓库目录结构是&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;yourname.github.io&lt;/em&gt;&lt;/strong&gt; &lt;br /&gt;
+ 　　|–&lt;em&gt;Gemfile&lt;/em&gt;&lt;br /&gt;
+ 　　|–&lt;strong&gt;&lt;em&gt;blog&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果这样子push到你的GitHub上是不行的，你生成的Jekyll文件必须全部在你的根目录下，所以你需要把blog文件夹下的文件全部移到根目录下（&lt;strong&gt;&lt;em&gt;yourname.github.io&lt;/em&gt;&lt;/strong&gt; 文件夹），这样子push到你的github上，就能正常运行了，不过别着急push，现在本地看下效果，执行命令：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bundle exec jekyll serve&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;你的站点在本地已经开始运行了，打开chrome输入&lt;strong&gt;localhost:4000&lt;/strong&gt;,
+就会看到生成的默认样式站点，此时是不是有点小激动(o^^o)♪，然后再把代码push到github仓库，然后在chrome输入&lt;strong&gt;http://username.github.io&lt;/strong&gt;，然后你的博客就运行在github上了。Yes！&lt;/p&gt;
+
+&lt;p&gt;然后我们再回来看下这个博客系统的目录结构，在&lt;a href=&quot;http://jekyll.bootcss.com/docs/structure/&quot;&gt;官方文档&lt;/a&gt;中有详细介绍，我们写文章的时候只需要在&lt;strong&gt;&lt;em&gt;_post&lt;/em&gt;&lt;/strong&gt;文件夹下写markdown即可，其中还说明了Jekyll的核心就是一个文本转换引擎，因为GitHub Pages上只能运行静态网页，所以Jekyll的功能就是帮我们生成一个全静态页面系统，其中包括将我们写的markdown生成为静态页面。&lt;/p&gt;
+
+&lt;p&gt;还有一些功能配置在文档中也有很详细的说明，在此就不细说了。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;更换主题&lt;/h3&gt;
+&lt;p&gt;嫌弃默认主题丑？好的，这里有&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;，请自行挑选，别忘了给作者个赞哦~&lt;br /&gt;
+其实这些主题都是作者已经配置好的系统，首先删掉你站点仓库下除&lt;em&gt;Gemfile&lt;/em&gt;和&lt;em&gt;Gemfile.lock&lt;/em&gt;外所有的文件和文件夹，然后将下载的源码直接丢到你的站点仓库里就可以了，然后重新运行：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bundle exec jekyll serve&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;当然你的前端功夫好的话，你也可以自己做主题，至于怎么做？看了文档中的目录介绍你就懂了。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;绑定自己的域名&lt;/h3&gt;
+&lt;p&gt;先上GitHub的&lt;a href=&quot;https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/&quot;&gt;说明文档&lt;/a&gt;，然后我在解说下，首先在你的站点仓库中创建一个名为CNAME的文件（既别名记录），添加内容为你的域名，注意不要带有协议（&lt;em&gt;http://&lt;/em&gt;、&lt;em&gt;https://&lt;/em&gt;、…），这里你写的域名是最后映射成的域名，举例说明：&lt;/p&gt;
+
+&lt;p&gt;假如说你写的是&lt;em&gt;www.blog.com&lt;/em&gt;，那么你在浏览器中输入&lt;em&gt;blog.com&lt;/em&gt;还是会映射成&lt;em&gt;www.blog.com&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;假如说你写的是&lt;em&gt;blog.com&lt;/em&gt;，那么你在浏览器输入&lt;em&gt;www.blog.com&lt;/em&gt;最后会映射成&lt;em&gt;blog.com&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;映射的地址始终和你写的一样，最后还有重要的一步，就是设置你域名解析到的GitHub服务器，在你的域名解析系统里设置（没有域名的自己去买喽，装逼是要付出点代价的😂），GitHub提供的两个服务器地址：&lt;em&gt;192.30.252.154&lt;/em&gt;、&lt;em&gt;192.30.252.153&lt;/em&gt;，自己选一个或者都写上，在你的域名解析系统里添加A记录，如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2016-1-12-build-my-blog/image1.png&quot; alt=&quot;图1&quot; /&gt;&lt;br /&gt;
+&lt;img src=&quot;/images/2016-1-12-build-my-blog/image2.png&quot; alt=&quot;图2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;设置成功后，等待解析生效，打开浏览器，输入你的域名。。  &lt;br /&gt;
+“卧槽，好刺眼！！这是何方神物！”&lt;/p&gt;
+
 </description>
         <pubDate>Wed, 13 Jan 2016 02:26:47 +0800</pubDate>
         <link>http://magicjacky.com/blog/2016/01/13/build-my-blog</link>
         <guid isPermaLink="true">http://magicjacky.com/blog/2016/01/13/build-my-blog</guid>
         
-        <category>博客搭建</category>
+        <category>博客</category>
         
-        <category>Githu</category>
-        
-        <category>Pages</category>
+        <category>GitHubPages</category>
         
         <category>Jekyll</category>
         
