@@ -1,18 +1,20 @@
 ---
 layout: post
-title: "搭建我的博客"
+title: "我的博客"
 date: 2016-1-12 18:26:47
 categories: 杂谈
 tags: 博客 GitHubPages Jekyll
 ---
 
 ##开篇
-折腾了两天，终于搞好了这个小博客，这第一篇文章也总结下搭建这博客的方法和建议得了。       
+
+折腾了两天，终于搞好了这个小博客，索性这第一篇文章就总结下搭建这博客的方法和经验得了。       
 
 ##为什么要搭建自己的博客    
 总结过去(zhuang)，展望未来(b)。       
 
 ##如何搭建     
+
 搭建博客的方式有很多，我这里用的是GitHub Pages和Jekyll，为什么用这个组合呢？   
 
 * GitHub Pages空间免费（好像是300M），流量无限，无需购买或者搭建自己的服务器（这酸爽~）。   
@@ -43,8 +45,12 @@ Jekyll 究竟是什么？我摘抄下官网上的介绍吧：
 
 安装完成后，在你的工程目录下 新建一个Gemfile文件，添加如下代码：  
 
-``source 'https://rubygems.org'``  
- ``gem 'github-pages' ``   
+{% highlight ruby %}
+
+source 'https://rubygems.org'  
+gem 'github-pages' 
+  
+ {% endhighlight %}
  
  保存，然后执行  
  
@@ -95,13 +101,11 @@ Jekyll 究竟是什么？我摘抄下官网上的介绍吧：
 
 映射的地址始终和你写的一样，最后还有重要的一步，就是设置你域名解析到的GitHub服务器，在你的域名解析系统里设置（没有域名的自己去买喽，装逼是要付出点代价的😂），GitHub提供的两个服务器地址：*192.30.252.154*、*192.30.252.153*，自己选一个或者都写上，在你的域名解析系统里添加A记录，如下：  
  
-![图1](/images/2016-1-12-build-my-blog/image1.png)  
-![图2](/images/2016-1-12-build-my-blog/image2.png)  
+![图1](/images/2016-1-12-build-my-blog/image1.jpg){: image featured}  
+![图2](/images/2016-1-12-build-my-blog/image2.jpg){: image featured}  
 
 设置成功后，等待解析生效，打开浏览器，输入你的域名。。    
-“卧槽，好刺眼！！这是何方神物！”
-
-
+“卧槽，好刺眼！！”
 
 
 
