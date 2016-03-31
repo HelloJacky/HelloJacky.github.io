@@ -1,14 +1,12 @@
 ---
 layout: no-about-page
 title: About
-date: 2016-1-12 17:23:10
 permalink: /about/
-#image: /images/about.jpg
+image: /images/pic02.jpg
 ---
 
-* ``二次元``　*@bilibili*　( ゜- ゜)つロ乾杯~
-* ``读　书``　*@kindle*　(。-ω-)zzz
-* ``运　动``　*@游泳@滑雪@羽毛球*　(≖ ‿ ≖)✧
-* ``游　戏``　*@dota*　(｡・`ω´･)
-* ``码　农``　*@ios*　(>_<｡)
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 
+You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+
+You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
