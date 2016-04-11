@@ -6,14 +6,14 @@ categories: 杂谈
 tags: 博客 GitHubPages Jekyll
 ---
 
-##开篇
+## 开篇
 
 折腾了两天，终于搞好了这个小博客，索性这第一篇文章就总结下搭建这博客的方法和经验得了。       
 
-##为什么要搭建自己的博客    
+## 为什么要搭建自己的博客    
 总结过去(zhuang)，展望未来(b)。       
 
-##如何搭建     
+## 如何搭建     
 
 搭建博客的方式有很多，我这里用的是GitHub Pages和Jekyll，为什么用这个组合呢？   
 
@@ -25,10 +25,10 @@ tags: 博客 GitHubPages Jekyll
 
 接下来就讲一下怎样搭建。   
 
-###在GitHub上建立自己的站点仓库   
+### 在GitHub上建立自己的站点仓库   
  去[GitHub Pages](https://pages.github.com/)按照上买的说明步骤创建你的站点仓库，我们搭建的是博客，所以类型就选择User or organzation site，然后clone你的仓库到本地，准备添加内容。   
  
-###安装Jekyll
+### 安装Jekyll
 Jekyll 究竟是什么？我摘抄下官网上的介绍吧： 
    
 **Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。** 
@@ -44,13 +44,10 @@ Jekyll 究竟是什么？我摘抄下官网上的介绍吧：
 ``gem install bundler``   
 
 安装完成后，在你的工程目录下 新建一个Gemfile文件，添加如下代码：  
-
-{% highlight ruby %}
-
+<pre><code>
 source 'https://rubygems.org'  
 gem 'github-pages' 
-  
- {% endhighlight %}
+</code></pre>
  
  保存，然后执行  
  
@@ -62,7 +59,7 @@ gem 'github-pages'
  
  ``bundle update``
     
-###生成博客系统   
+### 生成博客系统   
  接下来在你的站点仓库下新建一个Jekyll博客，执行如下命令：
    
  ``jekyll new blog``  
@@ -84,7 +81,7 @@ gem 'github-pages'
 
 还有一些功能配置在文档中也有很详细的说明，在此就不细说了。
 
-###更换主题
+### 更换主题
 嫌弃默认主题丑？好的，这里有[Jekyll Themes](http://jekyllthemes.org/)，请自行挑选，别忘了给作者个赞哦~  
 其实这些主题都是作者已经配置好的系统，首先删掉你站点仓库下除*Gemfile*和*Gemfile.lock*外所有的文件和文件夹，然后将下载的源码直接丢到你的站点仓库里就可以了，然后重新运行：
 
@@ -92,7 +89,7 @@ gem 'github-pages'
 
 当然你的前端功夫好的话，你也可以自己做主题，至于怎么做？看了文档中的目录介绍你就懂了。
 
-###绑定自己的域名
+### 绑定自己的域名
 先上GitHub的[说明文档](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/)，然后我在解说下，首先在你的站点仓库中创建一个名为CNAME的文件（既别名记录），添加内容为你的域名，注意不要带有协议（*http://*、*https://*、...），这里你写的域名是最后映射成的域名，举例说明：
   
 假如说你写的是*www.blog.com*，那么你在浏览器中输入*blog.com*还是会映射成*www.blog.com*
