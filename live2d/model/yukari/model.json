@@ -1,0 +1,1 @@
+{"version":"Sample 1.0.0","model":"yukari.moc","textures":["yukari.2048/texture_00.png"],"motions":{"idle":[{"file":"motion/sample_idle_001.mtn"},{"file":"motion/sample_idle_002.mtn"},{"file":"motion/sample_idle_003.mtn"}]},"physics":"yukari.physics.json"}
